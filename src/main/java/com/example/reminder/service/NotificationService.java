@@ -1,7 +1,7 @@
-package com.example.thymeleaf.service;
+package com.example.reminder.service;
 
-import com.example.thymeleaf.entity.Notification;
-import com.example.thymeleaf.repository.NotificationRepository;
+import com.example.reminder.entity.Notification;
+import com.example.reminder.repository.NotificationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

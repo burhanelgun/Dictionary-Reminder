@@ -1,4 +1,4 @@
-package com.example.thymeleaf.entity;
+package com.example.reminder.entity;
 
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 

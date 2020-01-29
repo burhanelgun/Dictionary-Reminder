@@ -1,6 +1,6 @@
-package com.example.thymeleaf.job;
+package com.example.reminder.job;
 
-import com.example.thymeleaf.entity.Notification;
+import com.example.reminder.entity.Notification;
 import org.quartz.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

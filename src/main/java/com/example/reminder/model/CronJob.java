@@ -1,6 +1,6 @@
-package com.example.thymeleaf.model;
+package com.example.reminder.model;
 
-public class CronJob extends BaseJob{
+public class CronJob extends com.example.reminder.model.BaseJob {
 
     String cronExpression;
 

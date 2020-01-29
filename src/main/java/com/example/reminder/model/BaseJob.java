@@ -1,4 +1,4 @@
-package com.example.thymeleaf.model;
+package com.example.reminder.model;
 
 public class BaseJob {
     private String jobGroup;

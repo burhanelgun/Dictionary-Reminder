@@ -1,6 +1,6 @@
-package com.example.thymeleaf.model;
+package com.example.reminder.model;
 
-public class SimpleJob extends BaseJob {
+public class SimpleJob extends com.example.reminder.model.BaseJob {
 
     private String interval;
 

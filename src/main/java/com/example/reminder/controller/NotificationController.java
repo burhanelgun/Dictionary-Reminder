@@ -1,9 +1,9 @@
-package com.example.thymeleaf.controller;
+package com.example.reminder.controller;
 
-import com.example.thymeleaf.model.CronJob;
-import com.example.thymeleaf.model.SimpleJob;
-import com.example.thymeleaf.job.WordGeneratorJob;
-import com.example.thymeleaf.service.NotificationService;
+import com.example.reminder.model.CronJob;
+import com.example.reminder.model.SimpleJob;
+import com.example.reminder.job.WordGeneratorJob;
+import com.example.reminder.service.NotificationService;
 import org.quartz.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
