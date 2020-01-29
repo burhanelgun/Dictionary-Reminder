@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<!--  main-fragment (title, otherStaticResources, header, nav, mainContent, footer)  -->
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layouts/main-layout :: main-fragment(
+                                                ~{::title},
+                                                ~{:: #products-static-resources},
+                                                ~{:: #products-header},
+                                                ~{:: #products-nav},
+                                                ~{:: #products-main-content},
+                                                ~{:: #products-footer}
+                                               )}">
+
+<head>
+    <title>Title of Products Page</title>
+
+    <th:block id="products-static-resources">
+        <script type="text/javascript" src="../static/products.js" th:src="@{/products.js}"></script>
+    </th:block>
+
+</head>
+<body>
+
+<div id="products-header">
+
+    Create Cron Job
+
+</div>
+
+<div id="products-nav" th:replace="~{/fragments/app-fragments :: nav-default}">
+    Nav
+</div>
+
+<div id="products-main-content">
+    <form th:action="@{/startNotificationCron}"  method="post" th:object="${cronJob}">
+        Job name:<br>
+        <input type="text" th:field="*{jobName}"/>
+        <br>Job group:<br>
+        <input type="text" th:field="*{jobGroup}"/>
+        <br>Trigger name:<br>
+        <input type="text" th:field="*{triggerName}"/>
+        <br>Trigger group:<br>
+        <input type="text" th:field="*{triggerGroup}"/>
+        <br>Cron Expression:<br>
+        <input type="text" th:field="*{cronExpression}"/>
+
+        <input type="submit" />
+    </form>
+</div>
+
+
+<div id="products-footer" th:replace="~{/fragments/app-fragments :: copyright}">
+    Footer
+</div>
+
+
+</body>
+</html>

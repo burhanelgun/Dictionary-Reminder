@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<!--  main-fragment (title, otherStaticResources, header, nav, mainContent, footer)  -->
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layouts/main-layout :: main-fragment(
+                                                ~{::title},
+                                                ~{:: #about-static-resources},
+                                                ~{:: #about-header},
+                                                ~{:: #about-nav},
+                                                ~{:: #about-main-content},
+                                                ~{:: #about-footer}
+                                               )}">
+
+<head>
+    <title>Title of About Page</title>
+
+    <th:block id="about-static-resources">
+
+        <script type="text/javascript" src="../static/about.js" th:src="@{/about.js}"></script>
+
+    </th:block>
+
+</head>
+<body>
+
+<div id="about-header">
+
+    Create Simple Job
+
+</div>
+
+<div id="about-nav" th:replace="~{/fragments/app-fragments :: nav-default}">
+    Nav
+</div>
+
+<div id="about-main-content">
+    <form th:action="@{/startNotificationSimple}"  method="post" th:object="${simpleJob}">
+        Job name:<br>
+        <input type="text" th:field="*{jobName}"/>
+        <br>Job group:<br>
+        <input type="text" th:field="*{jobGroup}"/>
+        <br>Trigger name:<br>
+        <input type="text" th:field="*{triggerName}"/>
+        <br>Trigger group:<br>
+        <input type="text" th:field="*{triggerGroup}"/>
+        <br>Interval:<br>
+        <input type="text" th:field="*{interval}"/>
+
+        <input type="submit" />
+    </form>
+</div>
+
+
+<div id="about-footer" th:replace="~{/fragments/app-fragments :: copyright}">
+    Footer
+</div>
+
+
+</body>
+</html>
